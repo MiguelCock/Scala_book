@@ -1,5 +1,3 @@
-import scala.io.StdIn.readLine
-
 trait Speaker:
   def speak(): String  // has no body, so it’s abstract
 

@@ -5,21 +5,19 @@ import scala.io.StdIn.readLine
 
     for i <- ints do println(i)
 
-    for (
+    for
         i <- 1 to 3
         j <- 'a' to 'c'
-    ) {
-        println(s"i = $i, j = $j")   // prints: "i = 2, j = b"
-    }
+    do
+        println(s"i = $i, j = $j")
 
     val doubles = for ( i <- ints ) yield (i * 2)
 
-    val val fruits = List("apple", "banana", "lime", "orange")
+    val fruits = List("apple", "banana", "lime", "orange")
 
-    val fruitLengths = for (
+    val fruitLengths = for
         f <- fruits
         if f.length > 4
-    ) {
-        yield f.length
-    }
-        
+    yield 
+        f.length
+    
