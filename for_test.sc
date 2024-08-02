@@ -1,5 +1,3 @@
-import scala.io.StdIn.readLine
-
 @main def for_test() =
     val ints = List(1, 2, 3, 4, 5)
 
