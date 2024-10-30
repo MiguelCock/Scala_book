@@ -4,10 +4,7 @@ class Player(val name: String)
 val players = IndexedSeq("a", "b", "c", "d", "c", "e", "f", "g", "h", "z").map(Player(_))
 
 def duckDuckGoose(players: Seq[Player], goose: Int): String = 
-    if goose <= players.length then 
-        players(goose - 1).name 
-    else 
-        players((goose - 1) % players.length).name
+    players((goose - 1) % players.length).name
 
 
 duckDuckGoose(players, 1)
