@@ -9,10 +9,10 @@ trait Runner:
 	def startRunning(): Unit = println("I’m running")
 	def stopRunning(): Unit = println("Stopped running")
 
-class Dog(name: String) extends Speaker, TailWagger, Runner:
+class Dog(val name: String) extends Speaker, TailWagger, Runner:
 	def speak(): String = "Woof!"
 
-class Cat(name: String) extends Speaker, TailWagger, Runner:
+class Cat(val name: String) extends Speaker, TailWagger, Runner:
 	def speak(): String = "Meow"
 	override def startRunning(): Unit = println("Yeah ... I don’t run")
 	override def stopRunning(): Unit = println("No need to stop")

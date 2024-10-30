@@ -62,6 +62,8 @@ def findT[A](list: List[A])(predicate: A => Boolean): Option[A] =
 findT(names)(a => a == "aaaa")
 findT(names)(a => a == "aa")
 
+findT(names)(_.equals("aaaa"))
+
 def filterRec[A](list: List[A])(predicate: A => Boolean): List[A] =
     list match
         case head :: next =>
@@ -83,3 +85,5 @@ def filterTa[A](data: List[A])(predicate: A => Boolean): List[A] =
             case Nil => acc.reverse
         
     loop(data, List.empty)
+
+filterTa(names)(_.startsWith("a"))
