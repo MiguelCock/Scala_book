@@ -35,3 +35,16 @@ getCount("")
 getCount("a")
 getCount("aa")
 getCount("aeiou")
+
+// ====================== Parse a linked list from a string ======================
+class Node(val data: Int, val next: Node = null)
+
+def parse(nodes: String): Node =
+    def loop(remaining: List[String]): Node =
+        remaining match
+            case  "null" :: next => null
+            case head :: next => Node(head.toInt, loop(next))
+    loop(nodes.split(" -> ").toList)
+
+parse("1 -> 2 -> 3 -> null")
+parse("0 -> 1 -> 4 -> 9 -> 16 -> null")
