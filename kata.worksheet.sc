@@ -17,3 +17,13 @@ duckDuckGoose(players, 28)
 duckDuckGoose(players, 12)
 duckDuckGoose(players, 2)
 duckDuckGoose(players, 7)
+
+// ====================== Multiply the number ======================
+
+def multiply(n: Long): Long = n * math.pow(5.toDouble, math.log10(n.abs.toDouble).floor + 1).toLong
+
+multiply(10L)
+multiply(5L)
+multiply(200L)
+multiply(0L)
+multiply(-2L)
